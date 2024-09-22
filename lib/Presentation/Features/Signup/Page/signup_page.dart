@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:local_notification_flutter/Bloc/Signup/signup_bloc.dart';
-import 'package:local_notification_flutter/Core/Constants/usages.dart';
+import 'package:local_notification_flutter/Core/Constants/Usages/usages.dart';
 
 import '../View/signup_view.dart';
 

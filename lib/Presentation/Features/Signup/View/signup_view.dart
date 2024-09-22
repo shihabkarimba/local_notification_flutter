@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:local_notification_flutter/Bloc/Signup/signup_bloc.dart';
-import 'package:local_notification_flutter/Core/Constants/validator.dart';
+import 'package:local_notification_flutter/Core/Constants/Validator/validator.dart';
 import 'package:local_notification_flutter/Core/Router/route.dart';
 import 'package:local_notification_flutter/Presentation/Shared/Widgets/toast_widget.dart';
 
-import '../../../../Core/Constants/usages.dart';
+import '../../../../Core/Constants/Usages/usages.dart';
 
 class SignupView extends StatefulWidget {
   const SignupView({super.key});
