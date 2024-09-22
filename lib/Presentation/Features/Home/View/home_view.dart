@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:local_notification_flutter/Bloc/UserProfile/user_profile_bloc.dart';
+import 'package:local_notification_flutter/Core/Router/route.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -46,9 +47,19 @@ class _HomeViewState extends State<HomeView> {
               },
             ),
           ),
-          const Expanded(
+          Expanded(
             child: Center(
-              child: Text('Home'),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Text('Home'),
+                  ElevatedButton(
+                      onPressed: () {
+                        router.goNamed(Routes.notification.name);
+                      },
+                      child: const Text('GO')),
+                ],
+              ),
             ),
           ),
         ],

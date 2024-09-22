@@ -4,7 +4,10 @@ import 'package:local_notification_flutter/Core/Constants/Notification/notificat
 Future<void> setupNotification() async {
   await AwesomeNotifications().initialize(
     null,
-    [Channels.basicChannel],
+    [
+      Channels.basicChannel,
+      Channels.profileChannel,
+    ],
     channelGroups: [Channels.basicChannelGroup],
   );
   final isNotificationAllowed =
