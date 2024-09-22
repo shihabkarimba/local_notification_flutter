@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:local_notification_flutter/Core/Constants/usages.dart';
+import 'package:local_notification_flutter/Core/Constants/Usages/usages.dart';
 import 'package:local_notification_flutter/Core/Router/route.dart';
 
-import '../../../../../Core/Constants/validator.dart';
 import '../../../../Bloc/Login/login_bloc.dart';
+import '../../../../Core/Constants/Validator/validator.dart';
 import '../../../Shared/Widgets/toast_widget.dart';
 
 class LoginView extends StatefulWidget {

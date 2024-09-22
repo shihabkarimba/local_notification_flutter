@@ -3,7 +3,7 @@ import 'dart:developer';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get_it/get_it.dart';
-import 'package:local_notification_flutter/Core/Constants/database_constants.dart';
+import 'package:local_notification_flutter/Core/Constants/Database/database_constants.dart';
 import 'package:local_notification_flutter/Domain/Repository/LocalAuthRepo/local_auth_repo.dart';
 import 'package:local_notification_flutter/Models/ErrorResponse/error_response.dart';
 import 'package:local_notification_flutter/Models/UserModel/user_model.dart';

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:local_notification_flutter/Core/Constants/usages.dart';
+import 'package:local_notification_flutter/Core/Constants/Usages/usages.dart';
 
 import '../../../../Bloc/Login/login_bloc.dart';
 import '../View/login_view.dart';
