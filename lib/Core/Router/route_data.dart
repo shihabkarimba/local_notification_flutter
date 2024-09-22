@@ -51,6 +51,14 @@ class Routes {
     },
   );
 
+  static final notification = RouteInfo(
+    name: 'notification',
+    path: 'notification',
+    pageBuilder: (context, state) {
+      return const MaterialPage(child: NotificationPage());
+    },
+  );
+
   static final profile = RouteInfo(
     name: 'profile',
     path: '/profile',

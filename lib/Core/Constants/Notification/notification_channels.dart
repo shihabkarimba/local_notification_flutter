@@ -7,6 +7,10 @@ class Channels {
     channelKey: ChannelKeys.basicChannel,
     channelName: NotificationConstants.basicChannelName,
     channelDescription: ChannelKeys.basicChannelGroup,
+    playSound: true,
+    importance: NotificationImportance.Max,
+    criticalAlerts: true,
+    enableVibration: true,
   );
   static NotificationChannelGroup basicChannelGroup = NotificationChannelGroup(
     channelGroupKey: ChannelKeys.basicChannelGroup,

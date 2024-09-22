@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:local_notification_flutter/Presentation/Features/Notification/Page/notification_page.dart';
 import 'package:local_notification_flutter/Presentation/Features/Profile/Page/profile_page.dart';
 
 import '../../Presentation/Features/Home/Page/home_page.dart';
@@ -47,8 +48,12 @@ final router = GoRouter(
               name: Routes.home.name,
               path: Routes.home.path,
               pageBuilder: Routes.home.pageBuilder,
-              routes: const [
-                ///
+              routes: [
+                GoRoute(
+                  name: Routes.notification.name,
+                  path: Routes.notification.path,
+                  pageBuilder: Routes.notification.pageBuilder,
+                ),
               ],
             ),
           ],
