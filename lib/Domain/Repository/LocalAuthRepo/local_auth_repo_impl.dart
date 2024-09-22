@@ -4,7 +4,7 @@ import 'dart:developer';
 import 'package:get_it/get_it.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../../../Core/Constants/storage_keys.dart';
+import '../../../Core/Constants/Storage/storage_keys.dart';
 import 'local_auth_repo.dart';
 
 class LocalAuthRepositoryImpl implements LocalAuthRepository {
