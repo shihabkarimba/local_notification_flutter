@@ -1,4 +1,5 @@
 import 'package:awesome_notifications/awesome_notifications.dart';
+import 'package:local_notification_flutter/Core/Constants/Notification/notification_channel_keys.dart';
 import 'package:local_notification_flutter/Core/Router/route.dart';
 
 class NotificationController {
@@ -27,6 +28,10 @@ class NotificationController {
   @pragma("vm:entry-point")
   static Future<void> onActionReceivedMethod(
       ReceivedAction receivedAction) async {
-    router.goNamed(Routes.notification.name);
+    if (receivedAction.channelKey == ChannelKeys.profileChannel) {
+      router.goNamed(Routes.profile.name);
+    } else {
+      router.goNamed(Routes.notification.name);
+    }
   }
 }

@@ -17,6 +17,7 @@ class ScaffoldWIthBottomNavBar extends StatefulWidget {
 }
 
 class _ScaffoldWIthBottomNavBarState extends State<ScaffoldWIthBottomNavBar> {
+  final _notification = GetIt.I<AwesomeNotifications>();
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
@@ -27,22 +28,48 @@ class _ScaffoldWIthBottomNavBarState extends State<ScaffoldWIthBottomNavBar> {
       ],
       child: Scaffold(
         body: widget.shell,
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            final notification = GetIt.I<AwesomeNotifications>();
-            notification.createNotification(
-              content: NotificationContent(
-                displayOnForeground: true,
-                id: 10,
-                criticalAlert: true,
-                channelKey: ChannelKeys.basicChannel,
-                actionType: ActionType.Default,
-                title: 'Hello World!',
-                body: 'This is my first notification!',
+        floatingActionButton: Padding(
+          padding: const EdgeInsets.only(left: 22),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              FloatingActionButton(
+                heroTag: 'btn1',
+                onPressed: () {
+                  _notification.createNotification(
+                    content: NotificationContent(
+                      displayOnForeground: true,
+                      id: 10,
+                      criticalAlert: true,
+                      channelKey: ChannelKeys.profileChannel,
+                      title: 'Go Profile',
+                      body: 'This is my first notification!',
+                      backgroundColor: Colors.yellow,
+                      color: Colors.yellow,
+                      displayOnBackground: true,
+                    ),
+                  );
+                },
+                child: const Icon(Icons.notifications),
               ),
-            );
-          },
-          child: const Icon(Icons.notification_add),
+              FloatingActionButton(
+                heroTag: 'btn2',
+                onPressed: () {
+                  _notification.createNotification(
+                    content: NotificationContent(
+                      displayOnForeground: true,
+                      id: 10,
+                      criticalAlert: true,
+                      channelKey: ChannelKeys.basicChannel,
+                      title: 'Go Notification!',
+                      body: 'This is my first notification!',
+                    ),
+                  );
+                },
+                child: const Icon(Icons.notification_add),
+              ),
+            ],
+          ),
         ),
         bottomNavigationBar: NavigationBar(
           labelBehavior: NavigationDestinationLabelBehavior.alwaysHide,
